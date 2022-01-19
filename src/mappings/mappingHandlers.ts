@@ -7,7 +7,7 @@ function createSumReward(accountId: string): SumReward {
     entity.totalReward = BigInt(0)
     return entity
 }
-export async function handleSumRewarded({
+export async function handleSumReward({
     block,
     event: {
         data: [account, newReward],
@@ -22,7 +22,7 @@ export async function handleSumRewarded({
     await entity.save()
 }
 
-export async function handleStakingRewarded({
+export async function handleStakingReward({
     idx,
     block,
     event: {
